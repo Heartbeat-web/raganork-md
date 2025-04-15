@@ -96,7 +96,7 @@ Module({on: 'text', fromMe: false}, (async (m, mat) => {
     }
   } 
   if (ANTIWORD_WARN?.split(",").includes(m.jid)){
-    let disallowedWords = (process.env.ANTI_WORDS || "nigga,fuck").split(",");
+    let disallowedWords = (process.env.ANTI_WORDS || "nigga,bastard,sex,toto,die,kill,murder,fuck").split(",");
     if (!process.env.ANTI_WORDS || process.env.ANTI_WORDS == 'auto') disallowedWords = require('badwords/array');
     let thatWord = containsDisallowedWords(m.message,disallowedWords)
     if (thatWord){
